@@ -7,13 +7,25 @@ services:
     plan: starter
     healthCheckPath: /api/health
     envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: clipforge-db
+          property: connectionString
       - key: PUBLIC_BASE_URL
         sync: false
       - key: FRONTEND_ORIGIN
         value: https://gowardhan0.github.io
       - key: JWT_SECRET
-        sync: false
+        generateValue: true
       - key: APP_ENCRYPTION_KEY
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: AGENCY_EMAIL
+        value: agency@clipforge.ai
+      - key: AGENCY_PASSWORD
         sync: false
       - key: OPENAI_API_KEY
         sync: false
@@ -43,3 +55,10 @@ services:
         sync: false
       - key: GOOGLE_REDIRECT_URI
         sync: false
+
+databases:
+  - name: clipforge-db
+    plan: free
+    region: singapore
+    databaseName: clipforge
+    user: clipforge
