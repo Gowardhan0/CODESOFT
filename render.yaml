@@ -7,15 +7,39 @@ services:
     plan: starter
     healthCheckPath: /api/health
     envVars:
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: FRONTEND_ORIGIN
+        value: https://gowardhan0.github.io
+      - key: JWT_SECRET
+        sync: false
+      - key: APP_ENCRYPTION_KEY
+        sync: false
       - key: OPENAI_API_KEY
         sync: false
       - key: OPENAI_MODEL
         value: gpt-4o-mini
       - key: WHISPER_MODEL
         value: whisper-1
-      - key: FRONTEND_ORIGIN
-        value: https://gowardhan0.github.io
-      - key: PUBLIC_BASE_URL
-        sync: false
       - key: MAX_UPLOAD_BYTES
         value: "2000000000"
+      - key: FFMPEG_PRESET
+        value: veryfast
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: RAZORPAY_WEBHOOK_SECRET
+        sync: false
+      - key: RAZORPAY_CREATOR_PLAN_ID
+        sync: false
+      - key: RAZORPAY_PRO_PLAN_ID
+        sync: false
+      - key: RAZORPAY_AGENCY_PLAN_ID
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false
