@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: clipforge-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: WHISPER_MODEL
+        value: whisper-1
+      - key: FRONTEND_ORIGIN
+        value: https://gowardhan0.github.io
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: MAX_UPLOAD_BYTES
+        value: "2000000000"
