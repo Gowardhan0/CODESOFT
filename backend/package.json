@@ -1,7 +1,7 @@
 {
-  "name":"clipforge-api","version":"2.0.0","private":true,"type":"module",
+  "name":"clipforge-api","version":"2.1.0","private":true,"type":"module",
   "scripts":{"start":"node server.js","dev":"node --watch server.js"},
   "dependencies":{
-    "bcryptjs":"^2.4.3","cors":"^2.8.5","dotenv":"^16.4.7","express":"^4.21.2","ffmpeg-static":"^5.2.0","googleapis":"^144.0.0","jsonwebtoken":"^9.0.2","multer":"^1.4.5-lts.1","openai":"^4.77.0","razorpay":"^2.9.6","uuid":"^11.0.3"
+    "bcryptjs":"^2.4.3","cors":"^2.8.5","dotenv":"^16.4.7","express":"^4.21.2","ffmpeg-static":"^5.2.0","googleapis":"^144.0.0","jsonwebtoken":"^9.0.2","multer":"^1.4.5-lts.1","openai":"^4.77.0","pg":"^8.16.3","razorpay":"^2.9.6","uuid":"^11.0.3"
   }
 }
